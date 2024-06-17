@@ -31,7 +31,7 @@ def main():
         w = csv.writer(csvfile, delimiter=',',
                        quotechar='|', quoting=csv.QUOTE_MINIMAL)
         w.writerow(["Address", "Public key", "Private key"])
-        for _ in range(10):
+        for _ in range(600):
             address, public_key, private_key = gen()
             w.writerow([address, public_key.decode(), private_key.decode()])
 
